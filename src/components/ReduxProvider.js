@@ -1,10 +1,10 @@
 // Imports
-import {questions} from "../assets/mock-data";
-import { Provider } from 'react-redux';
-import GlobalState from './reducers';
-import { createStore } from 'redux';
+import {Provider} from 'react-redux';
+import GlobalState from '../reducers/reducers';
+import {createStore} from 'redux';
 import React from 'react';
-import App from '../App';
+import App from './App';
+import {questions} from "../assets/mock-data";
 
 export default class ReduxProvider extends React.Component {
 	constructor(props){
@@ -12,20 +12,20 @@ export default class ReduxProvider extends React.Component {
 		this.initialState = {
 			score: 0,
 			finished: false,
-			currentQuestion: 0,
-			questions: questions
+			currentQuestion: 0, // posicion dentro del array de preguntas
+			questions: [...questions]
 		};
 		this.store = this.configureStore();
 	}
 
 	render() {
-		return {
+		return (
 			<Provider store={this.store}>
 				<div style={{height:'100%'}}>
-					<App store={this.store}/>
+					<App/>
 				</div>
 			</Provider>
-		};
+		);
 	}
 
 	configureStore(){
