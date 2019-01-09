@@ -1,0 +1,35 @@
+#raiz {
+	height: 100%;
+	width: 100%;
+	margin:10px;
+}
+
+#contenido {
+	display: inline-block;
+	text-align: center;
+	color:white;
+	margin: auto;
+	width: 80%;
+	padding: 10px;
+}
+
+#imagenDiv {
+	width: 50%;
+	float: left;
+}
+
+#imagen {
+	width: 100%;
+}
+
+#texto {
+	width: 40%;
+	float: right;
+	font-family: courier;
+}
+
+#botones {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-evenly;
+}

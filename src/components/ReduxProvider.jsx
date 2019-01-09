@@ -1,10 +1,10 @@
 // Imports
 import {Provider} from 'react-redux';
-import GlobalState from '../reducers/reducers';
+import GlobalState from '../reducers/reducers.jsx';
 import {createStore} from 'redux';
 import React from 'react';
-import App from './App';
-import {questions} from "../assets/mock-data";
+import App from './App.jsx';
+import {questions} from "../assets/mock-data.js";
 
 export default class ReduxProvider extends React.Component {
 	constructor(props){
@@ -21,7 +21,7 @@ export default class ReduxProvider extends React.Component {
 	render() {
 		return (
 			<Provider store={this.store}>
-				<div style={{height:'100%'}}>
+				<div>
 					<App/>
 				</div>
 			</Provider>

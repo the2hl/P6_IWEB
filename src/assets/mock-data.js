@@ -9,7 +9,7 @@ export const questions =[
 		"mime":"image/jpeg",
 		"url":"https://res.cloudinary.com/core-upm/image/upload/v1533288622/core/quiz2018/attachments/sgfjokgmrrtjibavxruz.jpg"},
 		"favourite":false,
-		"tips":[]},
+		"tips":["4 letras","2 vocales iguales"]},
 
 	{
 		"id":4,
@@ -20,7 +20,7 @@ export const questions =[
 		"mime":"image/jpeg",
 		"url":"https://res.cloudinary.com/core-upm/image/upload/v1540377108/core/quiz2018/attachments/dtdyxvpfufxhxzmf6twb.jpg"},
 		"favourite":false,
-		"tips":[]},
+		"tips":["5 letras","En inglés"]},
 
 	{
 		"id":13,
@@ -55,7 +55,7 @@ export const questions =[
 		"mime":"image/jpeg",
 		"url":"https://res.cloudinary.com/core-upm/image/upload/v1540377054/core/quiz2018/attachments/d6rwsnksvprtnrz0xopp.jpg"},
 		"favourite":false,
-		"tips":[]},
+		"tips":["En inglés"]},
 
 	{
 		"id":66,
@@ -67,7 +67,7 @@ export const questions =[
 		"mime":"image/jpeg",
 		"url":"https://res.cloudinary.com/core-upm/image/upload/v1540377934/core/quiz2018/attachments/aorzbrixvkoiffhzzzyc.jpg"},
 		"favourite":false,
-		"tips":["En inglÃ©s se titulaba LOST"]},
+		"tips":["En inglés se titulaba LOST"]},
 
 	{
 		"id":31,
