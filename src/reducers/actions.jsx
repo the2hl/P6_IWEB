@@ -1,8 +1,9 @@
+// Exports
+
 export const QUESTION_ANSWER = 'QUESTION_ANSWER';
 export const CHANGE_QUESTION = 'CHANGE_QUESTION';
 export const SUBMIT = 'SUBMIT';
 export const INIT_QUESTIONS = 'INIT_QUESTIONS';
-
 
 // Acción: responder a una pregunta
 export function questionAnswer(index, answer){

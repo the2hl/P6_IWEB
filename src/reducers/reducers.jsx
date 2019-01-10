@@ -1,6 +1,7 @@
-/***** Imports *****/
+// Imports 
+
 import {combineReducers} from 'redux';
-import {QUESTION_ANSWER, CHANGE_QUESTION, SUBMIT} from './actions'
+import {QUESTION_ANSWER, CHANGE_QUESTION, SUBMIT, INIT_QUESTIONS} from './actions';
 
 /***** Se crea un reducer básico para cada estado *****/
 /* El reducer es una función pura que toma el estado anterior
@@ -57,7 +58,13 @@ function questions(state = [], action = {}){
 								 */
 								action.payload.index === indice ?
 								action.payload.answer : question.userAnswer}
-			})
+			});
+		case INIT_QUESTIONS:
+			if (action.payload.questions !== undefined){
+				return action.payload.questions;
+			}else{
+				return state;
+			};
 		default:
 			return state;
 	}

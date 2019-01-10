@@ -5,9 +5,9 @@ export default class Game extends React.Component {
 		// Constante auxiliar
 		let tips = this.props.question.tips.map((tip, index)=>{
 			return (
-				<li key={index}>{tip}</li>
+				<li key={index} role="treeitem">{tip}</li>
 			);
-		})
+		});
 
 		let pagina = this.props.page;
 		let botonAnt = (
@@ -31,20 +31,22 @@ export default class Game extends React.Component {
 					<div id= "contenido">
 						<span id= "imagenDiv">
 							<img id= "imagen" src= {this.props.question.attachment.url /* imagen */}
-								alt="imagen" height="400dp" width="400dp"/>
+								alt="imagen relacionada con el quiz" height="400dp" width="400dp"/>
 						</span>
 						<span id= "texto">
-							<div id= "pregunta">
+							<div id= "pregunta" data-message= "Pregunta del quiz">
 								<h1>Pregunta:</h1>
 								<p>{this.props.question.question /* pregunta */}</p>
 							</div>
-							<div id= "pistas">
+							<div id= "pistas" data-message= "Pistas del quiz">
 								<h1>Pistas:</h1>
-								<ul>{tips /* pistas */}</ul>
+								<ul role="group">{tips /* pistas */}</ul>
 							</div>
-							<div id= "respuesta">
-								<h1>Tu respuesta:</h1>
-								<input type= "text" value= {this.props.question.userAnswer || ""} 
+							<div id= "respuesta" data-message= "Respuesta del quiz">
+								<label htmlFor="respuestaUsuario">Tu respuesta:</label>
+								<input type= "text" id= "respuestaUsuario" name= "respuestaUsuario"
+									placeholder= "Escribe tu respuesta aquí" 
+									value= {this.props.question.userAnswer || ""} 
 									onChange={(e)=>{
 										let valor = e.target.value;
 										this.props.onQuestionAnswer(valor);
@@ -54,7 +56,7 @@ export default class Game extends React.Component {
 							</div>
 						</span>
 					</div>
-					<div id= "botones">
+					<div id= "botones" data-message= "Botones del quiz">
 						{botonAnt}
 						<button id="submit" onClick= {()=>{this.props.clickSubmit()}}>
 						Submit
@@ -66,9 +68,9 @@ export default class Game extends React.Component {
 		}else{
 			return (
 				<div>
-					<h1>Tu puntuación:</h1>
-					<p>{this.props.puntuacion /* score final*/}</p>
-					<p>Refrescar la página para volver a jugar</p>
+					<h1>Tu puntuación es:</h1>
+					<h2>{this.props.puntuacion /* score final*/}</h2>
+					<p>Refresca la página para volver a jugar</p>
 				</div>
 			);
 		}
